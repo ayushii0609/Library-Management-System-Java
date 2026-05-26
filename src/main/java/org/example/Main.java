@@ -24,7 +24,6 @@ public class Main{
                     String authorName = sc.nextLine();
                     Book book = new Book(bookId, bookName, authorName);
                     librarian.addBook(book);
-                    System.out.println("Book added successfully.");
                     break;
 
                 case 2:
