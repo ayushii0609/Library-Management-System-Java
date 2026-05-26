@@ -21,6 +21,7 @@ A simple console-based Library Management System developed using Java and Object
 
 ### Inheritance
 - `Student` class inherits from `Person`
+- `Librarian` class inherits from `Person`
 
 ### Abstraction
 - `Person` abstract class
@@ -33,7 +34,6 @@ A simple console-based Library Management System developed using Java and Object
 
 - Java
 - IntelliJ IDEA
-- Maven
 
 ## Project Structure
 

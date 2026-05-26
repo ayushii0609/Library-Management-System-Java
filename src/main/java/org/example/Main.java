@@ -4,6 +4,7 @@ public class Main{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         Library library=new Library();
+        Librarian librarian = new Librarian(1,"Admin",library);
         while(true){
             System.out.println("-----Library Management System-----");
             System.out.println("Enter your choice: \n1.Add book \n2.View Book \n3.Add Student \n4.Issue Book \n5.Return Book \n6.View Student Details \n7.Exit");
@@ -22,12 +23,12 @@ public class Main{
                     System.out.print("Enter Author Name: ");
                     String authorName = sc.nextLine();
                     Book book = new Book(bookId, bookName, authorName);
-                    library.addBook(book);
+                    librarian.addBook(book);
                     System.out.println("Book added successfully.");
                     break;
 
                 case 2:
-                    library.viewBooks();
+                    librarian.viewBooks();
                     break;
 
                 case 3:
@@ -47,7 +48,7 @@ public class Main{
                     int issueStudentId = Integer.parseInt(sc.nextLine());
                     System.out.print("Enter Book ID: ");
                     int issueBookId = Integer.parseInt(sc.nextLine());
-                    library.issueBook(issueStudentId, issueBookId);
+                    librarian.issueBook(issueStudentId, issueBookId);
                     break;
 
                 case 5:
@@ -55,7 +56,7 @@ public class Main{
                     int returnStudentId = Integer.parseInt(sc.nextLine());
                     System.out.print("Enter Book ID: ");
                     int returnBookId = Integer.parseInt(sc.nextLine());
-                    library.returnBook(returnStudentId, returnBookId);
+                    librarian.returnBook(returnStudentId, returnBookId);
                     break;
 
                 case 6:
